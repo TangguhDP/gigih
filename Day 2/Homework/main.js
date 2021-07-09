@@ -16,7 +16,9 @@ function getAPI(url) {
     // Handle success
     .then((response) => response.json()) // convert to json
     .then((json) => console.log(json)) //print data to console
-    .catch((err) => console.log("Request Failed", err)); // Catch errors
+    .catch((err) => {
+      alert("Request Failed", err);
+    }); // Catch errors
 }
 
 getAPI(
