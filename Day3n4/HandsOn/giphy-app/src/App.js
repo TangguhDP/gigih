@@ -1,16 +1,15 @@
 import "./App.css";
-
+import Gif from "./components/GiphyWithSearch";
 function App() {
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
       <form>
-        <input className='input-text' type="text" name="search" />
-        <button className='search-button' type="button">Search</button>
+        <input className="input-text" type="text" name="search" />
+        <button className="search-button" type="button">
+          Search
+        </button>
       </form>
-      <img
-        alt="gambar"
-        src="https://media.giphy.com/media/Vh8pbGX3SGRwFDh3V0/source.gif"
-      />
+      <Gif />
     </div>
   );
 }
