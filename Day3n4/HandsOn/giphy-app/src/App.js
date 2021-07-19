@@ -1,17 +1,7 @@
 import "./App.css";
-import Gif from "./components/GiphyWithSearch";
+import Search from "./pages/Search";
 function App() {
-  return (
-    <div className="wrapper">
-      <form>
-        <input className="input-text" type="text" name="search" />
-        <button className="search-button" type="button">
-          Search
-        </button>
-      </form>
-      <Gif />
-    </div>
-  );
+  return <Search />;
 }
 
 export default App;
