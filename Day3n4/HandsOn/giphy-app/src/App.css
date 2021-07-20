@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* CUSTOM STYLE */
+
+.wrapper {
+  padding: 0.5em;
+  background-color: beige;
+}
+
+.input-text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  padding: 0.5em;
+}
