@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Gif from "../components/Gif";
+import { setData } from "../app/searchSlice";
 
 export default function Search() {
   const [search, setSearch] = useState("");
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  const dataQuery = useSelector((state) => state.search.data);
+  const dispatch = useDispatch();
 
   const getSearch = () => {
     fetch(
@@ -11,7 +15,8 @@ export default function Search() {
     )
       .then((response) => response.json())
       .then((response) => {
-        setData(response.data);
+        // setData(response.data);
+        dispatch(setData(response.data));
       });
   };
   return (
@@ -32,7 +37,7 @@ export default function Search() {
       >
         Search
       </button>
-      {data?.map((gif, i) => {
+      {dataQuery?.map((gif, i) => {
         return <Gif key={i} title={gif.title} url={gif.images.original.url} />;
       })}
     </div>
